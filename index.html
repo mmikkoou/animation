@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+    <style media="screen">
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        position: relative;
+        background-color: red;
+        animation-name: circle;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+      #div1 {animation-timing-function: ease;}
+      #div2 {animation-timing-function: ease-in;}
+      #div3 {animation-timing-function: linear;}
+      #div4 {animation-timing-function: ease-out;}
+      #div5 {animation-timing-function: ease-in-out;}
+        @keyframes circle {
+          0% {background-color: red; left: 0px; top: 0px;}
+          25% {background-color: orange;}
+          50% {background-color: yellow; left: 500px; top: 0px;}
+          75% {background-color: orange;}
+          100% {background-color: red; left: 0px; top: 0px;}
+        }
+
+        .circle {
+          position: absolute;
+          background-color: orange;
+          animation: second 5s ease-in infinite;
+        }
+        @keyframes second {
+          0% {background-color: orange; top: 0px; right: 0px;}
+          25% {background-color: orange; top: 0px; right: 100px;}
+          48% {background-color: orange; top: 490px; right: 148px; width: 90px; height: 110px;}
+          50% {background-color: yellow; top: 510px; right: 148px; width: 120px; height: 85px;}
+          55% {background-color: yellow; top: 480px; right: 150px; width: 100px; height: 100px;}
+          60% {background-color: yellow; top: 500px; right: 175px; width: 100px; height: 100px;}
+          100% {background-color: red; top: 500px; right: 300px;}
+        }
+
+        .kub {
+          border-radius: 0%;
+          position: absolute;
+          background-color: purple;
+          animation: third 5s ease-in infinite;
+        }
+        @keyframes third {
+          0% {background-color: purple; top: 0px; left: 600px;}
+          45% {background-color: blue; width: 100px; height: 100px;}
+          48% {background-color: blue; top: 505px; left: 600px; width: 110px; height: 90px;}
+          50% {background-color: blue; top: 500px; left: 600px; width: 100px; height: 100px;}
+          60% {background-color: blue; top: 500px; left: 700px;}
+          80% {background-color: red; top: 800px; left: 700px; opacity: 100%;}
+          100% {background-color: red; top: 800px; left: 700px; opacity: 0%;}
+        }
+
+        .circle2 {
+          position: absolute;
+          background-color: pink;
+          animation: fourth 5s ease-out infinite;
+        }
+        @keyframes fourth {
+          0% {background-color: orange; top: 0px; right: -100px; opacity: 100%;}
+          5% {background-color: orange; top: 0px; right: 100px; opacity: 100%;}
+          32% {background-color: orange; width: 100px; height: 100px; opacity: 100%;}
+          38% {background-color: orange; top: 420px; right: 248px; width: 125px; height: 75px; opacity: 100%}
+          40% {background-color: purple; top: 400px; right: 250px; width: 100px; height: 100px; opacity: 50%;}
+          60% {background-color: purple; top: 200px; right: 500px; width: 100px; height: 100px; opacity: 100%;}
+          72% {background-color: purple; width: 100px; height: 100px; opacity: 100%;}
+          78% {background-color: purple; top: 410px; right: 748px; width: 115px; height: 85px; opacity: 80%}
+          80% {background-color: blue; top: 400px; right: 750px; width: 100px; height: 100px; opacity: 50%;}
+          100% {background-color: blue; top: 100px; right: 900px; width: 100px; height: 100px; opacity: 100%;}
+        }
+
+        .kub2 {
+          border-radius: 0%;
+          position: absolute;
+          background-color: green;
+          animation: fifth 5s ease infinite;
+        }
+        @keyframes fifth {
+          0% {top: 400px; right: 0px; width: 100px;}
+          5% {width: 90px;}
+          50% {right: 900px; width: 100px;}
+          90% {top: 400px; right: 900px; width: 100px; height: 100px;}
+          91% {width: 80px; height: 120px;}
+          100% {top: 900px; right: 900px; width: 80px; height: 120px;}
+        }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+
+    <div class="circle"></div>
+    <div class="kub"></div>
+    <div class="circle2"></div>
+    <div class="kub2"></div>
+  </body>
+</html>
